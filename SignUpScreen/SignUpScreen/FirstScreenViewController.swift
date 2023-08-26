@@ -49,10 +49,21 @@ class FirstScreenViewController: UIViewController {
         
             signUp.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 20),
             signUp.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -20),
-            signUp.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: -20),
+            signUp.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: -40),
             signUp.heightAnchor.constraint(equalToConstant: 50)
         
         ])
+        
+        signUp.addTarget(self, action: #selector(signUpDidTapped), for: .touchUpInside)
+        
+    }
+    
+    //MARK: Button action
+    
+    @objc func signUpDidTapped() {
+        let vc = SecondScreenViewController()
+        vc.modalPresentationStyle = .fullScreen
+        navigationController?.pushViewController(vc, animated: true)
         
     }
 
