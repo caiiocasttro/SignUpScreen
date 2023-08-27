@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E53230692A9BADE4000F6DBE /* ThirdScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E53230682A9BADE4000F6DBE /* ThirdScreenViewController.swift */; };
 		E5FC07B42A9A11900015058B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5FC07B32A9A11900015058B /* AppDelegate.swift */; };
 		E5FC07B62A9A11900015058B /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5FC07B52A9A11900015058B /* SceneDelegate.swift */; };
 		E5FC07B82A9A11900015058B /* FirstScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5FC07B72A9A11900015058B /* FirstScreenViewController.swift */; };
@@ -16,6 +17,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		E53230682A9BADE4000F6DBE /* ThirdScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThirdScreenViewController.swift; sourceTree = "<group>"; };
 		E5FC07B02A9A11900015058B /* SignUpScreen.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SignUpScreen.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E5FC07B32A9A11900015058B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E5FC07B52A9A11900015058B /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -60,6 +62,7 @@
 				E5FC07B52A9A11900015058B /* SceneDelegate.swift */,
 				E5FC07B72A9A11900015058B /* FirstScreenViewController.swift */,
 				E5FC07C72A9A12060015058B /* SecondScreenViewController.swift */,
+				E53230682A9BADE4000F6DBE /* ThirdScreenViewController.swift */,
 				E5FC07BC2A9A11900015058B /* Assets.xcassets */,
 				E5FC07BE2A9A11900015058B /* LaunchScreen.storyboard */,
 				E5FC07C12A9A11900015058B /* Info.plist */,
@@ -138,6 +141,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E5FC07C82A9A12060015058B /* SecondScreenViewController.swift in Sources */,
+				E53230692A9BADE4000F6DBE /* ThirdScreenViewController.swift in Sources */,
 				E5FC07B82A9A11900015058B /* FirstScreenViewController.swift in Sources */,
 				E5FC07B42A9A11900015058B /* AppDelegate.swift in Sources */,
 				E5FC07B62A9A11900015058B /* SceneDelegate.swift in Sources */,
@@ -285,6 +289,7 @@
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -311,6 +316,7 @@
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
