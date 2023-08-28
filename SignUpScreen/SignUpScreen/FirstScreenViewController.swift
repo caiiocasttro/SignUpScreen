@@ -15,17 +15,21 @@ class FirstScreenViewController: UIViewController {
         button.backgroundColor = UIColor.systemBlue
         button.setTitle("Sign Up", for: .normal)
         button.setTitleColor(UIColor.white, for: .normal)
+        button.layer.shadowColor = UIColor(red: 0.078, green: 0.129, blue: 0.239, alpha: 0.25).cgColor
+        button.layer.shadowRadius = 4
+        button.layer.shadowOpacity = 0.5
+        button.layer.shadowOffset = CGSize(width: 0, height: 0)
         button.layer.cornerRadius = 10
         button.clipsToBounds = true
         return button
     }()
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
         configureLayout()
     }
-
+    
     
     //MARK: Configuring layout
     private func configureLayout() {
@@ -46,12 +50,12 @@ class FirstScreenViewController: UIViewController {
         signUp.translatesAutoresizingMaskIntoConstraints = false
         
         NSLayoutConstraint.activate([
-        
+            
             signUp.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 20),
             signUp.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -20),
             signUp.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: -40),
             signUp.heightAnchor.constraint(equalToConstant: 50)
-        
+            
         ])
         
         signUp.addTarget(self, action: #selector(signUpDidTapped), for: .touchUpInside)
@@ -66,6 +70,6 @@ class FirstScreenViewController: UIViewController {
         navigationController?.pushViewController(vc, animated: true)
         
     }
-
+    
 }
 

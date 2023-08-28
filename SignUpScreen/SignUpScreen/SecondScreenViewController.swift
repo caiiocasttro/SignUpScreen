@@ -18,6 +18,10 @@ class SecondScreenViewController: UIViewController {
         textField.layer.cornerRadius = 10
         textField.leftViewMode = .always
         textField.leftView = UIView(frame: .init(x: 0, y: 0, width: 20, height: 0))
+        textField.layer.shadowColor = UIColor(red: 0.078, green: 0.129, blue: 0.239, alpha: 0.25).cgColor
+        textField.layer.shadowRadius = 4
+        textField.layer.shadowOpacity = 0.5
+        textField.layer.shadowOffset = CGSize(width: 0, height: 0)
         textField.clipsToBounds = true
         return textField
     }()
@@ -26,9 +30,14 @@ class SecondScreenViewController: UIViewController {
         let textField = UITextField()
         textField.backgroundColor = UIColor.white
         textField.placeholder = "Email"
+        textField.autocapitalizationType = .none
         textField.layer.cornerRadius = 10
         textField.leftViewMode = .always
         textField.leftView = UIView(frame: .init(x: 0, y: 0, width: 20, height: 0))
+        textField.layer.shadowColor = UIColor(red: 0.078, green: 0.129, blue: 0.239, alpha: 0.25).cgColor
+        textField.layer.shadowRadius = 4
+        textField.layer.shadowOpacity = 0.5
+        textField.layer.shadowOffset = CGSize(width: 0, height: 0)
         textField.clipsToBounds = true
         return textField
     }()
@@ -37,9 +46,15 @@ class SecondScreenViewController: UIViewController {
         let textField = UITextField()
         textField.backgroundColor = UIColor.white
         textField.placeholder = "Password"
+        textField.autocapitalizationType = .none
+        textField.isSecureTextEntry = true
         textField.layer.cornerRadius = 10
         textField.leftViewMode = .always
         textField.leftView = UIView(frame: .init(x: 0, y: 0, width: 20, height: 0))
+        textField.layer.shadowColor = UIColor(red: 0.078, green: 0.129, blue: 0.239, alpha: 0.25).cgColor
+        textField.layer.shadowRadius = 4
+        textField.layer.shadowOpacity = 0.5
+        textField.layer.shadowOffset = CGSize(width: 0, height: 0)
         textField.clipsToBounds = true
         return textField
     }()
@@ -48,9 +63,15 @@ class SecondScreenViewController: UIViewController {
         let textField = UITextField()
         textField.backgroundColor = UIColor.white
         textField.placeholder = "Confirm password"
+        textField.autocapitalizationType = .none
+        textField.isSecureTextEntry = true
         textField.layer.cornerRadius = 10
         textField.leftViewMode = .always
         textField.leftView = UIView(frame: .init(x: 0, y: 0, width: 20, height: 0))
+        textField.layer.shadowColor = UIColor(red: 0.078, green: 0.129, blue: 0.239, alpha: 0.25).cgColor
+        textField.layer.shadowRadius = 4
+        textField.layer.shadowOpacity = 0.5
+        textField.layer.shadowOffset = CGSize(width: 0, height: 0)
         textField.clipsToBounds = true
         return textField
     }()
@@ -59,7 +80,12 @@ class SecondScreenViewController: UIViewController {
         let button = UIButton()
         button.backgroundColor = UIColor.systemBlue
         button.setTitle("Register", for: .normal)
+        button.setTitle("Disabled", for: .disabled)
         button.setTitleColor(UIColor.white, for: .normal)
+        button.layer.shadowColor = UIColor(red: 0.078, green: 0.129, blue: 0.239, alpha: 0.25).cgColor
+        button.layer.shadowRadius = 4
+        button.layer.shadowOpacity = 0.5
+        button.layer.shadowOffset = CGSize(width: 0, height: 0)
         button.layer.cornerRadius = 10
         button.clipsToBounds = true
         return button
@@ -151,14 +177,13 @@ class SecondScreenViewController: UIViewController {
         passTextField.delegate = self
         confirmPassTextField.delegate = self
         
-        registerButton.backgroundColor = registerButton.isEnabled ? UIColor.systemBlue : UIColor.systemBlue.withAlphaComponent(0.2)
-        
         registerButton.addTarget(self, action: #selector(registerDidTapped), for: .touchUpInside)
         
         createButton = validatedCredentials
             .map { $0 != nil }
             .receive(on: RunLoop.main)
             .assign(to: \.isEnabled, on: registerButton)
+            
         
     }
     
