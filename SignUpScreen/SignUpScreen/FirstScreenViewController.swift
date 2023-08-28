@@ -10,6 +10,15 @@ import UIKit
 class FirstScreenViewController: UIViewController {
     
     //MARK: Properties
+    private var label: UILabel = {
+        let label = UILabel()
+        label.text = "Let's try Combine 🤪"
+        label.font = .systemFont(ofSize: 30, weight: .bold)
+        label.textColor = UIColor.lightGray
+        label.textAlignment = .center
+        return label
+    }()
+    
     private var signUp: UIButton = {
         let button = UIButton()
         button.backgroundColor = UIColor.systemBlue
@@ -46,10 +55,15 @@ class FirstScreenViewController: UIViewController {
         view.addSubview(background)
         view.sendSubviewToBack(background)
         view.addSubview(signUp)
+        view.addSubview(label)
         
+        label.translatesAutoresizingMaskIntoConstraints = false
         signUp.translatesAutoresizingMaskIntoConstraints = false
         
         NSLayoutConstraint.activate([
+            
+            label.centerXAnchor.constraint(equalTo: view.centerXAnchor),
+            label.centerYAnchor.constraint(equalTo: view.centerYAnchor),
             
             signUp.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 20),
             signUp.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -20),

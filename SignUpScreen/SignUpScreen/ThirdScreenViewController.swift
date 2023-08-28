@@ -14,7 +14,7 @@ class ThirdScreenViewController: UIViewController {
         let label = UILabel()
         label.text = "Registered"
         label.font = .systemFont(ofSize: 30, weight: .bold)
-        label.textColor = UIColor.darkGray
+        label.textColor = UIColor.lightGray
         label.textAlignment = .center
         return label
     }()
