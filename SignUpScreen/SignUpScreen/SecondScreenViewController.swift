@@ -78,9 +78,9 @@ class SecondScreenViewController: UIViewController {
     
     private var registerButton: UIButton = {
         let button = UIButton()
-        button.backgroundColor = UIColor.systemBlue
+        button.backgroundColor = UIColor.systemBlue.withAlphaComponent(0.3)
         button.setTitle("Register", for: .normal)
-        button.setTitle("Disabled", for: .disabled)
+        button.setTitleColor(UIColor.white.withAlphaComponent(0.3), for: .disabled)
         button.setTitleColor(UIColor.white, for: .normal)
         button.layer.shadowColor = UIColor(red: 0.078, green: 0.129, blue: 0.239, alpha: 0.25).cgColor
         button.layer.shadowRadius = 4
@@ -271,6 +271,9 @@ extension SecondScreenViewController: UITextFieldDelegate {
             confirmPassTextField.becomeFirstResponder()
         } else if textField == confirmPassTextField {
             textField.resignFirstResponder()
+            if registerButton.isEnabled {
+                registerButton.backgroundColor = UIColor.systemBlue
+            }
         }
         
         return true
