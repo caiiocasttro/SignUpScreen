@@ -22,4 +22,5 @@ This project was developed in order to practice combine. Thinking about an alrea
 
 ### 📸 Screenshots of the application
  
-![Sign Up screenshots](https://github.com/caiiocasttro/SignUpScreen/assets/104564732/3e2ad38b-c589-4b52-9bc3-a8bdc2b0f811)
+![Sign Up screenshots](https://github.com/caiiocasttro/SignUpScreen/assets/104564732/7ed2db59-153d-431a-a17a-28391bf54363)
+
